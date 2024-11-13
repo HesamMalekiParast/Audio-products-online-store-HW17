@@ -32,9 +32,9 @@ INSERT INTO "tracks" ("album_id", "artist_id", "title", "duration", "file_type",
 (5, 5, 'In My Feelings', 217, 'mp3', 'Hip Hop', '5MB', 1);
 
 -- Insert data into sales table
-INSERT INTO "sales" ("customer_id", "quantity", "sale_date", "price_at_sale") VALUES 
-(1, 2, '2024-01-01', 2),
-(2, 1, '2024-01-02', 1),
-(3, 3, '2024-01-03', 3),
-(4, 2, '2024-01-04', 2),
-(5, 1, '2024-01-05', 1);
+INSERT INTO "sales" ("track_id","customer_id", "quantity", "sale_date", "price_at_sale") VALUES 
+(1, 1, 2, '2024-01-01', 2),
+(2, 2, 1, '2024-01-02', 1),
+(3, 3, 3, '2024-01-03', 3),
+(4, 4, 2, '2024-01-04', 2),
+(5, 5, 1, '2024-01-05', 1);

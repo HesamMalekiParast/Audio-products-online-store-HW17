@@ -31,12 +31,13 @@ CREATE TABLE "tracks" (
     FOREIGN KEY ("album_id") REFERENCES "albums"("album_id"),  
     FOREIGN KEY ("artist_id") REFERENCES "artists"("artist_id")  
 );  
-
 CREATE TABLE "sales" (  
-    "saleS_id" SERIAL NOT NULL PRIMARY KEY,  
+    "sales_id" SERIAL NOT NULL PRIMARY KEY,  
     "customer_id" INTEGER NOT NULL,  
+    "track_id" INTEGER,
     "quantity" INTEGER NOT NULL,  
     "sale_date" DATE NOT NULL,  
     "price_at_sale" INTEGER NOT NULL,    
-    FOREIGN KEY ("customer_id") REFERENCES "customers"("customer_id")  
+    FOREIGN KEY ("customer_id") REFERENCES "customers"("customer_id"),
+    FOREIGN KEY ("track_id") REFERENCES "tracks"("track_id")
 );
